@@ -1,27 +1,6 @@
-# Cloudinary SAAS Application
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { NextResponse } from "next/server";
 
-## Setup
-
-1. DaisyUI
-
-- Install daisyui package
-- Add the plugin and theme in tailwwind.config.ts file
-
-```typescript
-plugins: [require("daisyui")],
-  daisyui: {
-    themes: ["dark"],
-  },
-```
-
-Doc: https://daisyui.com/docs/install/
-
-2. Setup Clerk for authentication and authorization
-
-- Install clerk package - npm install @clerk/nextjs and follow the documentation
-- We will configure our own middleware
-
-```typescript
 const isPublicRoute = createRouteMatcher(["/signin", "/signup", "/", "/home"]);
 
 const isPublicApiRoute = createRouteMatcher(["/api/videos"]);
@@ -55,6 +34,3 @@ export default clerkMiddleware((auth, req) => {
 export const config = {
   matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
 };
-```
-
-Doc: https://clerk.com/docs/quickstarts/nextjs
