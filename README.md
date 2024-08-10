@@ -58,3 +58,10 @@ export const config = {
 ```
 
 Doc: https://clerk.com/docs/quickstarts/nextjs
+
+3. Setup Clerk Authentication and Authorization
+
+- Create a new application in Clerk
+- Get the API key and paste it in .env file
+- We can use the components given by Clerk for signup and signin
+- Refer Doc: https://clerk.com/docs/references/nextjs/custom-signup-signin-pages?_gl=1*1boqxdq*_gcl_au*MTU3NTAyNjYwOS4xNzIzMjc3Mjkx*_ga*MTU4MTAwNTc1My4xNzIzMzA5ODc0*_ga_1WMF5X234K*MTcyMzMwOTg3My4xLjEuMTcyMzMxMDA3NS4wLjAuMA..
