@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Pixel Icon -->
+  <g transform="translate(40, 40) scale(1.5)">
+    <rect x="0" y="0" width="40" height="40" fill="#4a90e2" />
+    <rect x="40" y="0" width="40" height="40" fill="#50e3c2" />
+    <rect x="0" y="40" width="40" height="40" fill="#f5a623" />
+    <rect x="40" y="40" width="40" height="40" fill="#d0021b" />
+  </g>
+  
+  <!-- Play Button Triangle -->
+  <polygon points="100,70 100,130 155,100" fill="#ffffff" />
+</svg>

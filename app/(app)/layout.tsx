@@ -13,6 +13,7 @@ import {
   UploadIcon,
   ImageIcon,
 } from "lucide-react";
+import Image from "next/image";
 
 const sidebarItems = [
   { href: "/home", icon: LayoutDashboardIcon, label: "Home Page" },
@@ -63,7 +64,7 @@ export default function AppLayout({
             <div className="flex-1">
               <Link href="/" onClick={handleLogoClick}>
                 <div className="btn btn-ghost normal-case text-2xl font-bold tracking-tight cursor-pointer">
-                  Cloudinary Showcase
+                  PixelPerfect Studio
                 </div>
               </Link>
             </div>
@@ -105,7 +106,12 @@ export default function AppLayout({
         <label htmlFor="sidebar-drawer" className="drawer-overlay"></label>
         <aside className="bg-base-200 w-64 h-full flex flex-col">
           <div className="flex items-center justify-center py-4">
-            <ImageIcon className="w-10 h-10 text-primary" />
+            <Image
+              src={"/pixelperfect-studio-logo.svg"}
+              alt="logo"
+              width={75}
+              height={75}
+            />
           </div>
           <ul className="menu p-4 w-full text-base-content flex-grow">
             {sidebarItems.map((item) => (

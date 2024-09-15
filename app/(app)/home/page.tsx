@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import VideoCard from "@/components/VideoCard";
 import { Video } from "@/types";
-import { ShimmerSimpleGallery } from "react-shimmer-effects";
 
 function Home() {
   const [videos, setVideos] = useState<Video[]>([]);
@@ -42,7 +41,14 @@ function Home() {
 
   if (loading) {
     return (
-      <ShimmerSimpleGallery className="dark" card imageHeight={300} caption />
+      <div className="container mx-auto p-4">
+        <h1 className="text-2xl font-bold mb-4">Videos</h1>
+        <div className="shimmer-wrapper">
+          {[...Array(9)].map((_, index) => (
+            <div key={index} className="shimmer"></div>
+          ))}
+        </div>
+      </div>
     );
   }
 

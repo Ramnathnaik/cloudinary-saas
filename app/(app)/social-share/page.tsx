@@ -20,6 +20,7 @@ export default function SocialShare() {
   );
   const [isUploading, setIsUploading] = useState(false);
   const [isTransforming, setIsTransforming] = useState(false);
+  const [isBackgroundRemoved, setIsBackgroundRemoved] = useState(false);
   const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -118,6 +119,17 @@ export default function SocialShare() {
                   ))}
                 </select>
               </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Remove Background</span>
+                </label>
+                <input
+                  type="checkbox"
+                  className="toggle"
+                  checked={isBackgroundRemoved}
+                  onChange={() => setIsBackgroundRemoved(!isBackgroundRemoved)}
+                />
+              </div>
 
               <div className="mt-6 relative">
                 <h3 className="text-lg font-semibold mb-2">Preview:</h3>
@@ -136,6 +148,7 @@ export default function SocialShare() {
                     crop="fill"
                     aspectRatio={socialFormats[selectedFormat].aspectRatio}
                     gravity="auto"
+                    removeBackground={isBackgroundRemoved}
                     ref={imageRef}
                     onLoad={() => setIsTransforming(false)}
                   />
